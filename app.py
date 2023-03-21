@@ -1,6 +1,5 @@
 # Import Modules for FLASK
 from flask import Flask, Response, jsonify, request
-from pyngrok import ngrok
 import numpy as np
 from PIL import Image
 import cv2 as cv
@@ -94,7 +93,5 @@ def face_detect():
         data["success"] = True
     return data
 
-url = ngrok.connect(5000).public_url
-print('Henzy Tunnel URL:', url)
 if __name__ == "__main__":
     app.run() # Make sure debug is false on production environment
